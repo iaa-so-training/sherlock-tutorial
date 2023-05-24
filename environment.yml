@@ -1,0 +1,20 @@
+name: sherlock
+channels:
+ - conda-forge
+ - defaults
+dependencies:
+  - numpy
+  - cython=0.29.21
+  - astropy=5.0.4
+  - astroquery=0.4.6
+  - python=3.8
+  - tk
+  - jupyterlab
+  - libpng
+  - freetype
+  - llvm=9
+  - gfortran_linux-64
+  - gcc_linux-64
+  - pip
+  - pip:
+    - sherlockpipe
