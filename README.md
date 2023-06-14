@@ -8,7 +8,6 @@ Please vitis the [SHERLOCK pipeline documentation](https://sherlockpipe.readthed
 <img src="https://github.com/iaa-so-training/sherlock-tutorial/assets/1053066/4f4c8113-cb8c-41c0-b5a4-48c89bd2b6a8" width="200">
 
 # Installation
-## With conda
 
 1. Make sure you have conda/mamba installed. You can follow the instructions in [Installing miniconda](https://droplets-spsrc.readthedocs.io/conda/#installing-miniconda).
 
@@ -25,21 +24,7 @@ mamba env create -f environment.yml
 conda activate sherlock
 ```
 
-## If you don't use conda
-
-Follow the installation instructions in the [SHERLOCK documentation](https://sherlock-ph.readthedocs.io/en/latest/installation.html) and make sure you have the following dependencies installed for the tutorial:
-
-```
-lightkurve==2.4.0
-numpy==1.23.5
-matplotlib==3.5.2
-pandas==1.5.3
-wotan==1.9
-foldedleastsquares==1.0.42
-astropy==5.0.4
-scipy==1.8.0
-
-```
+If you have any problems, check the description in the [SHERLOCK documentation](https://sherlock-ph.readthedocs.io/en/latest/installation.html).
 
 # Running the tutorial
 ## Executing the ipython Notebook tutorial
