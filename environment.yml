@@ -3,18 +3,33 @@ channels:
  - conda-forge
  - defaults
 dependencies:
-  - numpy
-  - cython=0.29.21
+  - lightkurve=2.4.0
+  - numpy=1.23.5
+  - matplotlib=3.5.2
+  - pandas=1.5.3
+#  - wotan=1.9
+#  - foldedleastsquares=1.0.42
   - astropy=5.0.4
-  - astroquery=0.4.6
-  - python=3.8
-  - tk
+  - scipy=1.8.0
+  - python=3.10
   - jupyterlab
-  - libpng
-  - freetype
-  - llvm=9
   - gfortran_linux-64
   - gcc_linux-64
   - pip
   - pip:
-    - sherlockpipe
+    - wotan==1.9
+    - foldedleastsquares==1.0.42
+    - sherlockpipe==0.36.8
+
+#  - numpy
+#  - cython=0.29.21
+#  - astropy=5.0.4
+#  - astroquery=0.4.6
+#  - python=3.8
+#  - tk
+#  - jupyterlab
+#  - libpng
+#  - freetype
+#  - llvm=9
+#  - gfortran_linux-64
+#  - gcc_linux-64
