@@ -4,14 +4,11 @@ channels:
  - defaults
 dependencies:
   - numpy=1.23.5
-  - matplotlib=3.5.2
-  - pandas=1.5.3
-  - astropy=5.0.4
-  - scipy=1.8.0
+  - cython=0.29.35
   - python=3.10
-  - jupyterlab
-  - gfortran_linux-64
-  - gcc_linux-64
+  - jupyterlab=4.0.2
+  - gfortran_linux-64=13.1.0
+  - gcc_linux-64=13.1.0
   - pip
   - pip:
     - alexfitter==1.2.12
