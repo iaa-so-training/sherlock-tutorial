@@ -4,11 +4,12 @@ channels:
  - defaults
 dependencies:
   - numpy=1.23.5
-  - cython=0.29.35
+  - cython=0.29.21
   - python=3.10
   - jupyterlab=4.0.2
   - gfortran_linux-64=13.1.0
   - gcc_linux-64=13.1.0
+  - ellc=1.8.5
   - pip
   - pip:
     - alexfitter==1.2.12
@@ -28,15 +29,13 @@ dependencies:
     - cftime==1.6.2
     - chardet==4.0.0
     - cmake==3.26.3
-    - configparser==5.0.1
+    - configparser==5.0.1  - cython=0.29.35
     - corner==2.2.2
     - cryptography==41.0.0
     - cycler==0.11.0
-    - Cython==0.29.21
     - dearwatson==0.7.6
     - Deprecated==1.2.14
     - dynesty==1.0.1
-    - ellc==1.8.5
     - emcee==3.0.2
     - everest-pipeline==2.0.12
     - extension-helpers==0.1
