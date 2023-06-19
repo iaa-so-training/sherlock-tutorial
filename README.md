@@ -59,7 +59,7 @@ files, which inspection will allow you to prepare the `xxxx.yaml` file for a fin
 
 ```nohup python3.10 -m sherlockpipe --properties xxxx.yaml &```
 
-Where the `xxxx.yaml` file corresponds to the best combination of parameters you want to apply: which cadences to use, which sectors, which detrends etc. In the folder [Yaml_examples](https://github.com/iaa-so-training/sherlock-tutorial/tree/main/Yaml%20examples) you can find a variety of combinations. The main results of this module are the promising signals that might be planetary candidates, for which we need to conduct a careful vetting. This module generates a folder `TIC-xxxxx`; inside it, one can find all the information about the transit search. 
+Where the `xxxx.yaml` file corresponds to the best combination of parameters you want to apply: which cadences to use, which sectors, which detrends etc. In the folder [Yaml examples](https://github.com/iaa-so-training/sherlock-tutorial/tree/main/Yaml%20examples) you can find a variety of combinations. The main results of this module are the promising signals that might be planetary candidates, for which we need to conduct a careful vetting. This module generates a folder `TIC-xxxxx`; inside it, one can find all the information about the transit search. 
 
 ***************************************************************************
 <b>(3) Vet the interesting signals </b>
