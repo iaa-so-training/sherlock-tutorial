@@ -16,6 +16,8 @@ Visit the [ExoFOP](https://exofop.ipac.caltech.edu/tess/target.php?id=200322593)
 
 Download the [TOI-540 results](https://cloud.iaa.csic.es/index.php/s/W8n833n3MQeEjTx)
 
+Discovery paper: [Ment et al. (2021)](https://ui.adsabs.harvard.edu/abs/2021AJ....161...23M/abstract)
+
 *****************************************
 <b>A false positive: TOI-5747</b>
 
