@@ -33,7 +33,7 @@ If you have any problems, check the description in the [SHERLOCK documentation](
 
 # Running the tutorial
 ## Executing the Jupyter Notebook tutorials
-Unfortunately, SHERLOCK is computationally expensive and has been designed to run, ideally, on a server with several cores available. Running on your laptop might not be very efficient. Hence, in this workshop, we will not purely execute SHERLOCK; on the contrary, we will explore several Jupyter notebooks that mimic how SHERLOCK works and emphasize understanding how SHERLOCK is built. The Jupyter notebooks are stored in the folder [Jupyter Notebooks](https://github.com/franpoz/WORKSHOP/Jupyter Notebooks).
+Unfortunately, SHERLOCK is computationally expensive and has been designed to run, ideally, on a server with several cores available. Running on your laptop might not be very efficient. Hence, in this workshop, we will not purely execute SHERLOCK; on the contrary, we will explore several Jupyter notebooks that mimic how SHERLOCK works and emphasize understanding how SHERLOCK is built. The Jupyter notebooks are stored in the folder [Jupyter Notebooks](Jupyter Notebooks).
 
 Execute:
 ```
