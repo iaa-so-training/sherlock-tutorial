@@ -29,7 +29,7 @@ dependencies:
     - cftime==1.6.2
     - chardet==4.0.0
     - cmake==3.26.3
-    - configparser==5.0.1  - cython=0.29.35
+    - configparser==5.0.1
     - corner==2.2.2
     - cryptography==41.0.0
     - cycler==0.11.0
