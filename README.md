@@ -47,24 +47,22 @@ Of the file explorer (left panel), navigate and open any of the notebooks, for e
 If you managed to have SHERLOCK installed on a server, then you might try any of the full examples that are stored in the folder [Full examples](https://github.com/iaa-so-training/sherlock-tutorial/tree/main/Full%20examples). To replicate these results, you just have to follow the six command lines as follows: 
 
 ***************************************************************************
-(1) Acquire and prepare the light curves from their online repositories
-***************************************************************************
+<b> (1) Acquire and prepare the light curves from their online repositories </b>
+
 ```nohup python3.10 -m sherlockpipe --properties explore.yaml --explore &```
 
 Where `explore.yaml` is a general template of the property file where you only need to include the TIC-ID. This template can be found here [explore.yaml](https://github.com/iaa-so-training/sherlock-tutorial). This command line will produce several folders and 
 files, which inspection will allow you to prepare the `xxxx.yaml` file for a fine-tunned search to be executed in the next step.
 
 ***************************************************************************
-(2) Search for planetary candidates
-***************************************************************************
+<b> (2) Search for planetary candidates</b>
 
 ```nohup python3.10 -m sherlockpipe --properties xxxx.yaml &```
 
 Where the `xxxx.yaml` file corresponds to the best combination of parameters you want to apply: which cadences to use, which sectors, which detrends etc. In the folder [Yaml_examples](https://github.com/iaa-so-training/sherlock-tutorial/tree/main/Yaml%20examples) you can find a variety of combinations. The main results of this module are the promising signals that might be planetary candidates, for which we need to conduct a careful vetting. This module generates a folder `TIC-xxxxx`; inside it, one can find all the information about the transit search. 
 
 ***************************************************************************
-(3) Vet the interesting signals
-***************************************************************************
+<b>(3) Vet the interesting signals </b>
 
 We have to navigate to the `TIC-xxxxx` folder generated previously. Then execute:
 
@@ -73,8 +71,7 @@ We have to navigate to the `TIC-xxxxx` folder generated previously. Then execute
 Where `x` is the number of the signal you want to vet; x=1,2,3 etc. This module will produce the folder `vetting_x`, where you will find a report that will give you a better idea about the credibility of the signal found.
 
 ***************************************************************************
-(4) Perform a statistical validation
-***************************************************************************
+<b>(4) Perform a statistical validation </b>
 
 If the vetting of a given candidate did not show any clear hint of a false positive, we can conduct a statistical validation. For this step, SHERLOCK relies on the TRICERATOPS package [(Giacalone et al. 2021)](https://ui.adsabs.harvard.edu/abs/2021AJ....161...24G/abstract). You just need to execute:
 
@@ -83,8 +80,8 @@ If the vetting of a given candidate did not show any clear hint of a false posit
 This module will explore a variety of astrophysical scenarios that might be producing the periodic transiting signal we found, such as nearby eclipsing binaries. The results will be stored in the folder `validation_x`.
 
 ***************************************************************************
-(5) Model the signals to refine their ephemerides
-***************************************************************************
+<b>(5) Model the signals to refine their ephemerides</b>
+
 
 If the results from the vetting (step 3) and validation (step 4) do not point out to a false positive, then you need to confirm your candidate from the ground. To this end, you need to obtain the most accurate planet parameters
 and to refine the ephemerides. In this context, SHERLOCK relies on the ALLESFITTER package [(Günther & Daylan 2021)](https://ui.adsabs.harvard.edu/abs/2021ApJS..254...13G/abstract). You just need to execute:   
@@ -94,8 +91,8 @@ and to refine the ephemerides. In this context, SHERLOCK relies on the ALLESFITT
 This command will generate the folder `fit_x`. Inside it, you will find all the information about the fitting, the planet parameters, and all the information to predict observational windows from your favorite telescopes.
 
 ***************************************************************************
-(6) Compute the observational windows from ground-based observatories to trigger a follow-up campaign
-***************************************************************************
+<b>(6) Compute the observational windows from ground-based observatories to trigger a follow-up campaign </b>
+
 
 You need to navigate to the `fit_x` folder. Copy inside this folder the file `observatories.csv`, where the information about the facility you would like to use have to be provided. A template of this file can be found here: [observatories.csv](https://github.com/franpoz/WORKSHOP). Then, you just need to execute:
 
@@ -105,7 +102,7 @@ This module will generate an observation plan with the coming observational wind
 
 # Additional material
 ## Slack channel for help
-We created the Slack channel `sherlock-help`, where you can find some discussions, alerts for updates, and help if you find some obstacle using SHERLOCK, etc. But remember, the channel is not to report bugs; for this, please open an issue in the main [SHERLOCK](https://github.com/franpoz/SHERLOCK/tree/master) GitHub site. If you are interested in joining this channel, please send us a request.
+We created the Slack channel `sherlock-help`, where you can find some discussions, alerts for updates, and help if you find some obstacle using SHERLOCK, etc. But remember, the channel is not to report bugs; for this, please open an issue in the main [SHERLOCK](https://github.com/franpoz/SHERLOCK/tree/master) GitHub site. If you are interested in joining this channel, send us a request.
 
 ## Recent usage
 
