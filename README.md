@@ -51,7 +51,7 @@ If you managed to have SHERLOCK installed on a server, then you might try any of
 ***************************************************************************
 ```nohup python3.10 -m sherlockpipe --properties explore.yaml --explore &```
 
-Where `explore.yaml` is a general template of the property file where you only need to include the TIC-ID. This template can be found here [explore.yaml](https://github.com/franpoz/WORKSHOP). This command line will produce several folders and 
+Where `explore.yaml` is a general template of the property file where you only need to include the TIC-ID. This template can be found here [explore.yaml](https://github.com/iaa-so-training/sherlock-tutorial). This command line will produce several folders and 
 files, which inspection will allow you to prepare the `xxxx.yaml` file for a fine-tunned search to be executed in the next step.
 
 ***************************************************************************
@@ -60,7 +60,7 @@ files, which inspection will allow you to prepare the `xxxx.yaml` file for a fin
 
 ```nohup python3.10 -m sherlockpipe --properties xxxx.yaml &```
 
-Where the `xxxx.yaml` file corresponds to the best combination of parameters you want to apply: which cadences to use, which sectors, which detrends etc. In the folder [yaml_examples](https://github.com/franpoz/WORKSHOP/yaml_examples) you can find a variety of combinations. The main results of this module are the promising signals that might be planetary candidates, for which we need to conduct a careful vetting. This module generates a folder `TIC-xxxxx`; inside it, one can find all the information about the transit search. 
+Where the `xxxx.yaml` file corresponds to the best combination of parameters you want to apply: which cadences to use, which sectors, which detrends etc. In the folder [Yaml_examples](https://github.com/iaa-so-training/sherlock-tutorial/tree/main/Yaml%20examples) you can find a variety of combinations. The main results of this module are the promising signals that might be planetary candidates, for which we need to conduct a careful vetting. This module generates a folder `TIC-xxxxx`; inside it, one can find all the information about the transit search. 
 
 ***************************************************************************
 (3) Vet the interesting signals
@@ -105,7 +105,7 @@ This module will generate an observation plan with the coming observational wind
 
 # Additional material
 ## Slack channel for help
-We created the Slack channel `sherlock-help`, where you can find some discussions, alerts for updates, and help if you find some obstacle using SHERLOCK, etc. But remember, the channel is not to report bugs; for this, please open an issue in the main [SHERLOCK](https://github.com/franpoz/SHERLOCK/tree/master) GitHub site. If you are interested in joining this channel, please send a request.
+We created the Slack channel `sherlock-help`, where you can find some discussions, alerts for updates, and help if you find some obstacle using SHERLOCK, etc. But remember, the channel is not to report bugs; for this, please open an issue in the main [SHERLOCK](https://github.com/franpoz/SHERLOCK/tree/master) GitHub site. If you are interested in joining this channel, please send us a request.
 
 ## Recent usage
 
