@@ -1,0 +1,1 @@
+In this folder you can find a variety of examples that you can use in your search. For more items that you can add to your properties file (xxxx.yaml) have a look at the `properties.yaml`, which contains all the possibilites.      
