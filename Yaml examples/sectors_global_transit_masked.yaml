@@ -1,0 +1,30 @@
+TARGETS: 
+   TIC 259377017:
+    MODE: GLOBAL
+    SECTORS: [3,4]
+    AUTO_DETREND_ENABLED: False
+    INITIAL_HIGH_RMS_MASK: False
+    INITIAL_SMOOTH_ENABLED: True
+    INITIAL_HIGH_RMS_THRESHOLD: 2.0
+    EXPTIME: 120
+    DETREND_L_MIN: 0.2
+    DETREND_L_MAX: 1.2
+    DETRENDS_NUMBER: 10
+    DETREND_CORES: 10
+    CPU_CORES: 35
+    MAX_RUNS: 5
+    SNR_MIN: 5
+    SDE_MIN: 5
+    PERIOD_MIN: 0.2
+    PERIOD_MAX: 30
+    INITIAL_TRANSIT_MASK:
+       - T0: 1387.09
+         P: 3.360
+         D: 100
+       - T0: 1389.50
+         P: 5.660
+         D: 110
+       - T0: 1389.68
+         P: 11.379
+         D: 150
+

@@ -1,0 +1,174 @@
+TARGETS:
+
+# Whether SHERLOCK will run all the sectors together, separately or both. [GLOBAL|SECTOR|BOTH]
+MODE: "GLOBAL"
+
+######################################################################################################################
+### DETRENDS SETUP
+######################################################################################################################
+# If enabled, an initial mask for high RMS areas is applied ONLY to SHORT CADENCE light curves (no FFI).
+INITIAL_HIGH_RMS_MASK: False
+# If enabled, an initial Savinsky-Golay filter is applied ONLY to SHORT CADENCE light curves (no FFI).
+INITIAL_SMOOTH_ENABLED: True
+# Multiplier factor to select high RMS hours areas
+INITIAL_HIGH_RMS_THRESHOLD: 2
+# Hours for RMS binning
+INITIAL_HIGH_RMS_BIN_HOURS: 4
+# Accepted detrend methods are 'biweight' and 'gp'
+DETREND_METHOD: 'biweight'
+# Minimum detrend window to build the detrends set
+DETREND_L_MIN:
+# Maximum detrend window to build the detrends set
+DETREND_L_MAX:
+# Number of detrend models to be generated from the original light curve
+DETRENDS_NUMBER: 6
+# Whether original light curve is to be ignored in the analysis. Sometimes the curve is very irregular and has much data
+# down below 1 and hence, many signals are found there with strong SDEs.
+IGNORE_ORIGINAL: False
+# Number of cpu cores to be used for parallel detrend model creation
+DETREND_CORES: 7
+# The corrected flux provided by ELEANOR to be used for TESS long cadence data. Options are [pca_flux and corr_flux]
+ELEANOR_CORRECTED_FLUX: 'pca_flux'
+# Auto-detrend is a feature allowing an initial detrend execution against the original light curve to remove strong
+# periodic trends which might considerably affect the entire execution of SHERLOCK. The best example where auto-detrend
+# performs well are 'fast rotators' and the worst example might be stars with 'hot jupiters', where auto-detrend usage
+# is completely discouraged. USE CAREFULLY.
+AUTO_DETREND_ENABLED: False
+# Two auto-detrend methods are enabled: 'biweight' and 'cosine'. 'cosine' has proven to work well for 'fast rotators'
+# though it needs to be tested better and deeper
+AUTO_DETREND_METHOD: 'cosine'
+# The auto-detrend ratio is the factor which will be multiplied to the stronger period found in the auto-detrend
+# process. The result is the window size to be used in the auto-detrend procedure.
+AUTO_DETREND_RATIO: 0.25
+# User defined python class extending SHERLOCK Preparer abstract class. An absolute path to the file must be provided.
+PREPARE_ALGORITHM:
+# User defined sigma threshold for outliers clipping
+OUTLIERS_SIGMA: 3
+# The lightkurve 'author' to be used for the download. ELEANOR is also supported for long cadence TESS data.
+AUTHOR:
+# Cadence of data to be retrieved
+EXPTIME:
+# Number of cadences to be binned together (e.g. EXPTIME_BINNING: 4 for EXPTIME: 120 will mean a binned curve with 500
+#cadence)
+EXPTIME_BINNING: 1
+######################################################################################################################
+### TRANSIT ADJUST SETUP
+######################################################################################################################
+# Maximum number of runs of SHERLOCK
+MAX_RUNS: 10
+# Minimum number of SECTORS for an execution
+MIN_SECTORS: 1
+# Maximum number of SECTORS for an execution. If the target contains more, it will be skipped.
+MAX_SECTORS: 999999
+# SNR threshold for a candidate to be accepted and finish the execution.
+SNR_MIN: 5
+# SDE threshold for a candidate to be accepted and finish the execution.
+SDE_MIN: 5
+# Number of processes to be spawned by SHERLOCK search.
+CPU_CORES: 7
+# Search zone can be 'hz' or 'ohz' for habitable and optimistic habitable zones. This will override period_min and
+# period_max values
+SEARCH_ZONE:
+# User defined python class extending SHERLOCK SearchZone abstract class. An absolute path to the file must be provided.
+CUSTOM_SEARCH_ZONE:
+# Minimum period for the search period grid
+PERIOD_MIN: 0.5
+# Maximum period for the search period grid
+PERIOD_MAX: 33
+# The period to be used to calculate the transit duration used as limit to define the lowest detrend window size.
+PERIOD_PROTECT: 10
+# The binning to be applied to RMS calculations
+BIN_MINUTES: 10
+# Found transits can be masked or can be reduced to 1. Thus 'mask' and 'subtract' methods are provided. 'subtract' is
+# discouraged as it is partially implemented and hasn't been tested properly.
+MASK_MODE: 'mask'
+# Six modes are available: basic (best SDE), border-correct (best SDE*border_score) and quorum (border-corrected SDE
+# agreement-based on every valid signal best fit), basic-snr (best SDE), border-correct-snr (best SNR*border_score)
+# and quorum-snr (border-corrected SNR agreement-based on every valid signal best fit),
+BEST_SIGNAL_ALGORITHM: 'quorum'
+# If BEST_SIGNAL_ALGORITHM is set to 'quorum', this value is used as a scale factor for the quorum votes.
+QUORUM_STRENGTH: 1.2
+# If QUORUM is used as BEST_SIGNAL_ALGORITHM, this variable is used to decide when SHERLOCK should be stopped because of
+# lack of persistence in the found signals of the last executed run (maximum of agreed votes over the entire number of
+# signals)
+MIN_QUORUM: 0.25
+# User defined python class extending SHERLOCK SignalSelector abstract class. An absolute path to the file must be
+# provided.
+CUSTOM_SELECTION_ALGORITHM:
+# User defined template to be used to perform the least squares algorithm. If provided, it will replace the FIT_METHOD
+# selection.
+CUSTOM_TRANSIT_TEMPLATE:
+# Selection of fit method ("tls", "bls", "grazing", "tailed")
+FIT_METHOD: "tls"
+# Selection of T0 fit percent over the diration (admitted range from 0.01 to 0.1). Default is None so the oversampling
+# is calculated from the entire time lapse taken by the light curve.
+OVERSAMPLING: 3
+# Selection of T0 fit percent over the duration (admitted range from 0.01 to 0.1)
+T0_FIT_MARGIN: 0.05
+# Selection of duration grid step (admitted range from 1.01 to 1.1)
+DURATION_GRID_STEP: 1.1
+
+######################################################################################################################
+### STAR INFO
+######################################################################################################################
+STAR:
+#  TIC 273369281:
+#    MASS: 1.20
+#    MASS_LOWER_ERROR: 0.10
+#    MASS_UPPER_ERROR: 0.30
+#    RADIUS: 1.15
+#    RADIUS_LOWER_ERROR: 0.05
+#    RADIUS_UPPER_ERROR: 0.25
+#    TEFF: 4000
+#    LUM: 1.25
+#    LOGG: 0.15
+#    LD_COEFFICIENTS: [0.25, 0.64]
+
+######################################################################################################################
+### INITIAL MASK
+######################################################################################################################
+# The initial mask of time ranges to be applied. E.g: [[1546.25, 1550.5], [1561, 1563]]
+INITIAL_MASK:
+
+# The initial mask of known transiting candidates to be applied. E.g:
+# INITIAL_TRANSIT_MASK:
+#   - T0: 1354.5510
+#     P: 20.70573
+#     D: 136.9
+INITIAL_TRANSIT_MASK:
+
+# The aperture file to be used to create the light curve
+APERTURE:
+
+######################################################################################################################
+### AUTO_DETREND_PERIOD - If any value of this section overlaps any auto-detrend setup, auto-detrend will be
+# disabled for the overlapping objects.
+######################################################################################################################
+# The detrend period to be used as an initial detrend to the PDCSAP_FLUX light curves
+AUTO_DETREND_PERIOD:
+
+######################################################################################################################
+### STELLAR SIMPLE OSCILLATIONS REDUCTION
+######################################################################################################################
+# Flag to enable the algorithm
+SIMPLE_OSCILLATIONS_REDUCTION: False
+# SNR limit to stop the algorithm
+OSCILLATIONS_MIN_SNR: 4
+# Amplitude relationship vs flux standard deviation to stop the algorithm
+OSCILLATIONS_AMPLITUDE_THRESHOLD: 0.001
+# Window size width in frequency micro-Hertzs
+OSCILLATIONS_WS_PERCENT: 60
+# Minimum period to be used to compute the oscillations periodogram (defaults to 1min)
+OSCILLATIONS_MIN_PERIOD: 0.0006875
+# Maximum period to be used to compute the oscillations periodogram. If set to less than OSCILLATIONS_MIN_PERIOD, 1/3
+# of the transits min period will be used.
+OSCILLATIONS_MAX_PERIOD: 0
+
+# Flag to signal SHERLOCK for updating the TOIs, KOIs and EPICs
+UPDATE_OIS: False
+# Flag to signal SHERLOCK for force-updating the metadatas
+UPDATE_FORCE: False
+# Flag to signal SHERLOCK for cleaning the metadatas
+UPDATE_CLEAN: False
+# Root directory to store sherlock, LATTE, lightkurve and eleanor metadatas. Defaults to home of running user.
+CACHE_DIR:
