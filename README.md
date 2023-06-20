@@ -33,7 +33,7 @@ If you have any problems, check the description in the [SHERLOCK documentation](
 
 # Running the tutorial
 ## Executing the Jupyter Notebook tutorials
-Unfortunately, SHERLOCK is computationally expensive and has been designed to run, ideally, on a server with several cores available. Running on your laptop might not be very efficient. Hence, in this workshop, we will not purely execute SHERLOCK; on the contrary, we will explore several Jupyter notebooks that mimic how SHERLOCK works and emphasize understanding how SHERLOCK is built. The Jupyter notebooks are stored in the folder [Jupyter Notebooks](https://github.com/iaa-so-training/sherlock-tutorial/tree/main/Jupyter%20Notebooks).
+Unfortunately, SHERLOCK is computationally expensive and has been designed to run, ideally, on a server with several cores available. Running on your laptop might not be very efficient. Hence, in this workshop, we will not purely execute SHERLOCK; on the contrary, we will explore several Jupyter notebooks that mimic how SHERLOCK works and emphasize understanding how SHERLOCK is built. The Jupyter notebooks are stored in the folder [Jupyter_Notebooks](https://github.com/iaa-so-training/sherlock-tutorial/tree/main/Jupyter_Notebooks).
 
 Execute:
 ```
@@ -59,7 +59,7 @@ files, which inspection will allow you to prepare the `xxxx.yaml` file for a fin
 
 ```nohup python3.10 -m sherlockpipe --properties xxxx.yaml &```
 
-Where the `xxxx.yaml` file corresponds to the best combination of parameters you want to apply: which cadences to use, which sectors, which detrends etc. In the folder [Yaml examples](https://github.com/iaa-so-training/sherlock-tutorial/tree/main/Yaml%20examples) you can find a variety of combinations. The main results of this module are the promising signals that might be planetary candidates, for which we need to conduct a careful vetting. This module generates a folder `TIC-xxxxx`; inside it, one can find all the information about the transit search. 
+Where the `xxxx.yaml` file corresponds to the best combination of parameters you want to apply: which cadences to use, which sectors, which detrends etc. In the folder [Yaml_examples](https://github.com/iaa-so-training/sherlock-tutorial/tree/main/Yaml_examples) you can find a variety of combinations. The main results of this module are the promising signals that might be planetary candidates, for which we need to conduct a careful vetting. This module generates a folder `TIC-xxxxx`; inside it, one can find all the information about the transit search. 
 
 ***************************************************************************
 <b>(3) Vet the interesting signals </b>
