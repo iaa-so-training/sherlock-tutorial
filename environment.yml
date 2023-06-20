@@ -14,7 +14,7 @@ dependencies:
   - pandas=1.5.3
   - astropy=5.0.4
   - scipy=1.8.0
-  - pip
+  - pip=23.1.2
   - pip:
     - lightkurve==2.4.0
     - wotan==1.9
