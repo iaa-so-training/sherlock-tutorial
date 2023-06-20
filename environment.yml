@@ -1,4 +1,4 @@
-name: sherlock-light
+name: sherlock
 channel_priority: strict
 channels:
  - conda-forge
