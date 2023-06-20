@@ -44,7 +44,7 @@ jupyter lab
 Of the file explorer (left panel), navigate and open any of the notebooks, for example, the simplest one, [tess_lightcurves.ipynb](https://github.com/iaa-so-training/sherlock-tutorial/blob/main/Jupyter%20Notebooks/tess_lightcurves.ipynb). Execute the cells in order.
 
 ## Executing SHERLOCK on a computational server
-If you managed to have SHERLOCK installed on a server, then you might try any of the full examples that are stored in the folder [Full examples](https://github.com/iaa-so-training/sherlock-tutorial/tree/main/Full%20examples). To replicate these results, you just have to follow the six command lines as follows: 
+If you managed to have SHERLOCK installed on a server, then you might try any of the full examples that are stored in the folder [Full_examples](https://github.com/iaa-so-training/sherlock-tutorial/tree/main/Full_examples). To replicate these results, you just have to follow the six command lines as follows: 
 
 ***************************************************************************
 <b> (1) Acquire and prepare the light curves from their online repositories </b>
