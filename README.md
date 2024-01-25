@@ -88,13 +88,20 @@ and to refine the ephemerides. In this context, SHERLOCK relies on the ALLESFITT
 
 ```nohup python3.10 -m sherlockpipe.fit --candidate x &```
 
-This command will generate the folder `fit_x`. Inside it, you will find all the information about the fitting, the planet parameters, and all the information to predict observational windows from your favorite telescopes.
+This command will generate the folder `fit_[x]`. Inside it, you will find all the information about the fitting, the planet parameters, and all the information to predict observational windows from your favorite telescopes.
+
+Additionally, if you have several candidates that you would like to fit together, you can execute the following:
+
+```nohup python3.10 -m sherlockpipe.fit --candidate x,y &```
+
+Where `x` and `y` are, for example, the first and the second planetary candidates found in the search process. The results will be stored in the folder named `fit_[x,y]`
+
 
 ***************************************************************************
 <b>(6) Compute the observational windows from ground-based observatories to trigger a follow-up campaign </b>
 
 
-You need to navigate to the `fit_x` folder. Copy inside this folder the file `observatories.csv`, where the information about the facility you would like to use have to be provided. A template of this file can be found here: [observatories.csv](https://github.com/franpoz/WORKSHOP). Then, you just need to execute:
+You need to navigate to the `fit_[x]` folder. Copy inside this folder the file `observatories.csv`, where the information about the facility you would like to use have to be provided. A template of this file can be found here: [observatories.csv](https://github.com/franpoz/WORKSHOP). Then, you just need to execute:
 
 ```nohup python3.10 -m sherlockpipe.plan --observatories observatories.csv &```
 
