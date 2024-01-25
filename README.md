@@ -83,10 +83,10 @@ This module will explore a variety of astrophysical scenarios that might be prod
 <b>(5) Model the signals to refine their ephemerides</b>
 
 
-If the results from the vetting (step 3) and validation (step 4) do not point out to a false positive, then you need to confirm your candidate from the ground. To this end, you need to obtain the most accurate planet parameters
-and to refine the ephemerides. In this context, SHERLOCK relies on the ALLESFITTER package [(Günther & Daylan 2021)](https://ui.adsabs.harvard.edu/abs/2021ApJS..254...13G/abstract). You just need to execute:   
+If the results from the vetting (step 3) and validation (step 4) do not point out to a false positive, then you need to confirm your candidate from the ground or space. To this end, you need to obtain the most accurate planet parameters
+and refine the ephemerides. In this context, SHERLOCK relies on the ALLESFITTER package [(Günther & Daylan 2021)](https://ui.adsabs.harvard.edu/abs/2021ApJS..254...13G/abstract). You just need to execute:   
 
-```nohup python3.10 -m sherlockpipe.fit --candidate x &```
+```nohup python3.10 -m sherlockpipe.fit2 --candidate x &```
 
 This command will generate the folder `fit_[x]`. Inside it, you will find all the information about the fitting, the planet parameters, and all the information to predict observational windows from your favorite telescopes.
 
@@ -101,7 +101,7 @@ Where `x` and `y` are, for example, the first and the second planetary candidate
 <b>(6) Compute the observational windows from ground-based observatories to trigger a follow-up campaign </b>
 
 
-You need to navigate to the `fit_[x]` folder. Copy inside this folder the file `observatories.csv`, where the information about the facility you would like to use have to be provided. A template of this file can be found here: [observatories.csv](https://github.com/franpoz/WORKSHOP). Then, you just need to execute:
+You need to navigate to the `fit_[x]` folder. Copy the file `observatories.csv` inside this folder, where the information about the facility you would like to use has to be provided. A template of this file can be found here: [observatories.csv](https://github.com/franpoz/WORKSHOP). Then, you just need to execute:
 
 ```nohup python3.10 -m sherlockpipe.plan --observatories observatories.csv &```
 
