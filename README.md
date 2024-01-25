@@ -92,7 +92,7 @@ This command will generate the folder `fit_[x]`. Inside it, you will find all th
 
 Additionally, if you have several candidates that you would like to fit together, you can execute the following:
 
-```nohup python3.10 -m sherlockpipe.fit --candidate x,y &```
+```nohup python3.10 -m sherlockpipe.fit2 --candidate x,y &```
 
 Where `x` and `y` are, for example, the first and the second planetary candidates found in the search process. The results will be stored in the folder named `fit_[x,y]`
 
