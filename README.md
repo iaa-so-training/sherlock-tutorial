@@ -86,13 +86,13 @@ This module will explore a variety of astrophysical scenarios that might be prod
 If the results from the vetting (step 3) and validation (step 4) do not point out to a false positive, then you need to confirm your candidate from the ground or space. To this end, you need to obtain the most accurate planet parameters
 and refine the ephemerides. In this context, SHERLOCK relies on the ALLESFITTER package [(Günther & Daylan 2021)](https://ui.adsabs.harvard.edu/abs/2021ApJS..254...13G/abstract). You just need to execute:   
 
-```nohup python3.10 -m sherlockpipe.fit2 --candidate x &```
+```nohup python3.10 -m sherlockpipe.fit --candidate x &```
 
 This command will generate the folder `fit_[x]`. Inside it, you will find all the information about the fitting, the planet parameters, and all the information to predict observational windows from your favorite telescopes.
 
 Additionally, if you have several candidates that you would like to fit together, you can execute the following:
 
-```nohup python3.10 -m sherlockpipe.fit2 --candidate x,y &```
+```nohup python3.10 -m sherlockpipe.fit --candidate x,y &```
 
 Where `x` and `y` are, for example, the first and the second planetary candidates found in the search process. The results will be stored in the folder named `fit_[x,y]`
 
